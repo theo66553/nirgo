@@ -1,12 +1,16 @@
 ---// Variables
-local CloneCore = cloneref(game.Gethui)
+local CloneCore = cloneref(game.CoreGui)
 local CloneScreenGui = Instance.new("ScreenGui")
 local Camera = game:GetService("Workspace").Camera
 local RunService = game:GetService("RunService")
 local Mouse = game:GetService("Players").LocalPlayer:GetMouse()
 local InputService = game:GetService("UserInputService")
 local TweenService = game:GetService("TweenService")
-
+-- bypasses
+if not gethui then 
+ if not gethui then gethui = function() return game:GetService("Players").LocalPlayer.PlayerGui end end;
+ gethui = function() return cloneref(game:GetService("CoreGui")) end;
+end
 -- Menu/UI Creation
 if not isfile("eclipse.wtf") then
    makefolder("eclipse.wtf")
