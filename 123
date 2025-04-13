@@ -7,6 +7,7 @@ local Mouse = game:GetService("Players").LocalPlayer:GetMouse()
 local InputService = game:GetService("UserInputService")
 local TweenService = game:GetService("TweenService")
 
+
 -- Menu/UI Creation
 if not isfile("eclipse.wtf") then
    makefolder("eclipse.wtf")
